@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class WifipointsConfig(AppConfig):
+class PuntosWifiConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'wifipoints'
+    name = 'puntos_wifi'

@@ -1,0 +1,30 @@
+scalar DateTime
+scalar GenericScalar
+
+"""
+Se define el objeto AccesoType para su posterior referencia en el proyecto
+"""
+type AccesoType {
+  id_wifi: String!
+  programa: String!
+  fecha_instalacion: DateTime!
+  latitud: Float!
+  longitud: Float!
+  colonia: String!
+  alcaldia: String!
+}
+
+"""
+JSON Web Token mutation, Usado para la seguridad de comunicación
+"""
+type ObtainJSONWebToken {
+  token: String
+}
+
+type Query {
+  accesos(search: String): [AccesoType]
+}
+
+type Verify {
+  payload: GenericScalar
+}

@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-we%qjy4repfvu6aysdk!9j6txbpf+zb@ed8n+i16oov&6b-+!6
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -37,12 +37,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'wifipoints',
     'graphene_django',
+    'puntos_wifi',
 ]
 
 GRAPHENE = {
-    'SCHEMA': 'app.schema.schema',
+    'SCHEMA': 'arkon_api.schema.schema',
     'MIDDLEWARE': [
         'graphql_jwt.middleware.JSONWebTokenMiddleware'
     ]
@@ -76,8 +76,12 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'arkon_api.wsgi.application'
+AUTHENTICATION_BACKENDS = [
+    "graphql_jwt.backends.JSONWebTokenBackend",
+    "django.contrib.auth.backends.ModelBackend",
+]
 
+WSGI_APPLICATION = 'arkon_api.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases

@@ -4,16 +4,16 @@ from django.core.validators import (
 )
 from datetime import date
 
-class accesos(models.Model):
+class Accesos(models.Model):
 
     id_wifi = models.CharField(
         verbose_name="Identificador:",
-        max_length=1000,
+        max_length=100,
         validators=[
             MinLengthValidator(
                 0, message="La descripción debe tener por lo menos 1 caracter."),
             MaxLengthValidator(
-                1000, message="No puede pasar los 1000 caracteres."),
+                100, message="No puede pasar los 100 caracteres."),
         ], 
         error_messages={
             "blank": "No puede estar vacío.",
@@ -23,12 +23,12 @@ class accesos(models.Model):
 
     programa = models.CharField(
         verbose_name="Programa:",
-        max_length=1000,
+        max_length=100,
         validators=[
             MinLengthValidator(
                 1, message="El programa debe tener por lo menos 1 caracter."),
             MaxLengthValidator(
-                1000, message="No puede pasar los 1000 caracteres."),
+                100, message="No puede pasar los 100 caracteres."),
         ], 
         error_messages={
             "blank": "No puede estar vacío.",
@@ -69,12 +69,12 @@ class accesos(models.Model):
     
     colonia = models.CharField(
         verbose_name="Colonia:",
-        max_length=1000,
+        max_length=100,
         validators=[
             MinLengthValidator(
                 1, message="La colonia debe tener por lo menos 1 caracter."),
             MaxLengthValidator(
-                1000, message="No puede pasar los 1000 caracteres."),
+                100, message="No puede pasar los 100 caracteres."),
         ], 
         error_messages={
             "blank": "No puede estar vacío.",
@@ -84,12 +84,12 @@ class accesos(models.Model):
 
     alcaldia = models.CharField(
         verbose_name="Alcaldía:",
-        max_length=1000,
+        max_length=100,
         validators=[
             MinLengthValidator(
                 1, message="La alcaldía debe tener por lo menos 1 caracter."),
             MaxLengthValidator(
-                1000, message="No puede pasar los 1000 caracteres."),
+                100, message="No puede pasar los 100 caracteres."),
         ], 
         error_messages={
             "blank": "No puede estar vacío.",
