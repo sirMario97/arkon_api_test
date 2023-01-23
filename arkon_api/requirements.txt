@@ -6,3 +6,4 @@ graphene_django==3.0.0
 graphql_core==3.2.3
 graphql-relay==3.2.0
 mysqlclient==2.1.1
+pytest==7.2.1

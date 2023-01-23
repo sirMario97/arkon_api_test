@@ -2,7 +2,7 @@ import graphene
 from graphene import relay
 from graphene_django import DjangoObjectType
 from graphene_django.filter import DjangoFilterConnectionField
-from graphql import GraphQLError
+#from graphql import GraphQLError ----> No implementado
 from django.db.models import Q
 from .models import Accesos
 from decimal import Decimal, InvalidOperation  
