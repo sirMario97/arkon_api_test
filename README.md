@@ -19,7 +19,9 @@ Las funcionalidades principales de la api son la entrega de información almacen
   <li>Una lista paginada de puntos de acceso dada una colonia</li>
   <li>Una lista paginada de puntos WiFi ordenada por proximidad a unacoordenada dada al indicar la latitud y la longitud</li>
 </ol> 
-
+<p align="center">
+  <img width="950" height="600" alt="arkon diagrama" src="https://raw.githubusercontent.com/sirMario97/arkon_api_test/main/Arkon%20api.png">
+</p>
 ## Instalación
 <em>*Es importante considerar que el desarrollo se realizó sobre el SO de windows, por lo cual, algunas librerías que a continuación se requieren para funcionar, pueden cambiar*</em>
 
